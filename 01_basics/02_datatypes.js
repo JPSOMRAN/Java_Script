@@ -18,8 +18,13 @@ console.log(3
     //undefined=>when u didn't define value.Eg.:let state
     //symbol=>when will learn react then learn,just for uniqueness
     //object=>Itminaan mai sikhenge baad mai Zanab
-    console.log(typeof "Som");
-    console.log(typeof 93);
+    console.log(typeof "Som");//string
+    console.log(typeof nama);//string
+    console.log(typeof 93);//number
+    console.log(typeof isLoggedIn);//boolean
+    console.log(typeof object);//undefined
+    console.log(typeof null);//object
+    console.log(typeof undefined);//undefined
     console.table([nama,age,isLoggedIn,state,upperDoab,typeof "Som",typeof 93]);
     
     
