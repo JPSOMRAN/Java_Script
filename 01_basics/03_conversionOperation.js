@@ -113,3 +113,4 @@ console.log(typeof ab_number);//string
 //"120xyz"=>NaN
 //true=>1;false=>0;   
 
+
