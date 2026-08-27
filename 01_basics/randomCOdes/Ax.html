@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webpage with Accessibility Features</title>
+    <style>
+        /* Basic styling for paragraphs */
+        p {
+            margin: 20px 0;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Webpage with Tabindex, Accesskey, Draggable, and Contenteditable</h1>
+
+    <!-- Paragraphs with tabindex -->
+    <p tabindex="2">This is the second paragraph. Press <strong>Tab</strong> to focus on this first.</p>
+    <p tabindex="1">This is the first paragraph. You will navigate to this after the second paragraph.</p>
+    <p tabindex="3">This is the third paragraph. It has tabindex set to 3.</p>
+    <p tabindex="4">This is the fourth paragraph. It has tabindex set to 4.</p>
+    <p tabindex="5" draggable="true" contenteditable="true">
+        This is the fifth paragraph. You can <strong>drag</strong> this text and it is also <strong>editable</strong>. 
+        Feel free to change the content here!
+    </p>
+
+    <!-- Hyperlink with accesskey -->
+    <p>
+        To visit the OpenAI website, press <strong>Alt + o</strong> (Windows) or <strong>Control + Option + o</strong> (Mac) 
+        to access the link: 
+        <a href="https://www.openai.com" target="_blank" accesskey="o">OpenAI</a>
+    </p>
+
+</body>
+</html>

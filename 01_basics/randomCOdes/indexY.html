@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll Effect Page</title>
+    <style>
+        /* Global styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            height: 4000px; /* Increase height to enable scroll effect */
+        }
+
+        /* Sticky Navigation Bar */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+            text-align: center;
+        }
+
+        .navbar ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 18px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Section with horizontal repeated image */
+        .repeated-image {
+            background-image: url('https://wallpapercave.com/wp/wp10554173.jpg'); /* Example gaming wallpaper */
+            background-repeat: repeat-x;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        /* Section content styling */
+        section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        section h2 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        section p {
+            font-size: 18px;
+            color: #444;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Sticky Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Section with repeated background image -->
+    <section id="home">
+        <h2>Home</h2>
+        <div class="repeated-image"></div>
+        <p>Welcome to our homepage. Scroll down to explore more content.</p>
+    </section>
+
+    <!-- Other Sections -->
+    <section id="services">
+        <h2>Services</h2>
+        <p>We offer a wide range of services to meet your needs. Feel free to explore.</p>
+    </section>
+
+    <section id="gallery">
+        <h2>Gallery</h2>
+        <p>Explore our gallery and see what we have to offer.</p>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Learn more about our mission and values.</p>
+    </section>
+
+</body>
+</html>

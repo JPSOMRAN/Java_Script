@@ -1,0 +1,121 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Webpage</title>
+    <style>
+        /* Global Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            height: 4000px; /* Page height for scroll effect */
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background-color: #333;
+            padding: 10px 0;
+            z-index: 1000;
+        }
+
+        .navbar ul {
+            list-style-type: none;
+            display: flex;
+            justify-content: center;
+        }
+
+        .navbar ul li {
+            margin: 0 20px;
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            transition: background-color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        /* Content Section Styles */
+        .content section {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .content section h2 {
+            margin-bottom: 20px;
+        }
+
+        .content section img {
+            width: 100%;
+            max-width: 600px;
+            margin-bottom: 20px;
+        }
+
+        .content section p {
+            font-size: 18px;
+            color: #444;
+        }
+
+        /* Repeated Image in Home Section */
+        .repeated-image {
+            background-image: url('https://wallpapercave.com/wp/wp10554173.jpg'); /* Gaming wallpaper URL */
+            background-repeat: repeat-x;
+            height: 150px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </div>
+
+    <!-- Content Section -->
+    <div class="content">
+        <section id="home">
+            <h2>Home</h2>
+            <div class="repeated-image"></div>
+            <img src="https://via.placeholder.com/600x300" alt="Home Image">
+            <p>Welcome to our homepage! Scroll down to explore more.</p>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <img src="https://via.placeholder.com/600x300" alt="Services Image">
+            <p>We offer a range of services to meet your needs.</p>
+        </section>
+
+        <section id="gallery">
+            <h2>Gallery</h2>
+            <img src="https://via.placeholder.com/600x300" alt="Gallery Image">
+            <p>Take a look at our gallery for inspiration.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <img src="https://via.placeholder.com/600x300" alt="About Us Image">
+            <p>Learn more about our team and mission.</p>
+        </section>
+    </div>
+</body>
+</html>
