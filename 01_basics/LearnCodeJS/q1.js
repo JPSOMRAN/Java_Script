@@ -1,9 +1,14 @@
 //Synchronus
-console.log("Hello Peter")
+console.log("1st msg")
 function greet(){
-    console.log("Hello Print msg");
+    console.log("2nd msg");
 
 }
 greet()
 
-console.log("Hello is Endgame over")
+console.log("Hello End is near")
+/*
+1st msg
+2nd msg
+Hello End is near
+*/
