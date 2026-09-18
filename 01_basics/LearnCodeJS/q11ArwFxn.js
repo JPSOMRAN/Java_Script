@@ -46,3 +46,8 @@ const identity=()=>({
      age:23
 });
 console.log(identity())
+
+function funct(name="Samuel"){
+     return "Hello "+name
+}
+console.log(funct("Pietro"))
