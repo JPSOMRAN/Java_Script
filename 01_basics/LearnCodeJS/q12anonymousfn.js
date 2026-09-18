@@ -30,4 +30,4 @@ const isAdult = function(age){
     return age>18
 }
 console.log(isAdult(19))
-//Callback fx
+
