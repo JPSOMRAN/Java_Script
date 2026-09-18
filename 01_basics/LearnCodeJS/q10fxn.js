@@ -49,3 +49,17 @@ function fxxn(devotion){
 }
 const devout=fxxn("You")
 console.log(devout)
+
+function square(l){
+    return "Square of 5 is "+l*l;
+}
+const result = square(5);
+console.log(result);
+
+function testx(x){
+    return x*2;
+}
+const a= testx(5);
+const b=testx(10);
+console.log(a)
+console.log(b)
