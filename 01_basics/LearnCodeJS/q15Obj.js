@@ -16,11 +16,11 @@ const users=[
     },
     {
        id:4,
-       name:"PhushFaah Raj",
+       name:"PhushFaah Raj", 
        email:"besirperkimovie@gmail.com"
     }
 ];
-users.forEach(user=>console.log(user));
+users.forEach(user=> console.log(user));
 users.forEach(user=>console.log(user.name));
 const upperCaseUserValue=users.map(user=>user.email.toLocaleUpperCase());
 console.log(upperCaseUserValue);
