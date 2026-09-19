@@ -19,7 +19,11 @@ const users=[
        name:"PhushFaah Raj",
        email:"besirperkimovie@gmail.com"
     }
-]
-users.forEach(user=>console.log(user))
-// const filteredValue=forces.filter(force=>force==="NSG")
-// console.log(filteredValue)
+];
+users.forEach(user=>console.log(user));
+users.forEach(user=>console.log(user.name));
+const upperCaseUserValue=users.map(user=>user.email.toLocaleUpperCase());
+console.log(upperCaseUserValue);
+const filteredValue = users.filter(user => user.id === 1);
+
+console.log(filteredValue);
