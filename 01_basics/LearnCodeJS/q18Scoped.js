@@ -17,3 +17,41 @@ function display(){
 }
 display()
 
+
+// ==========================================
+// 1. MODULE-LEVEL CONSTANT (Read-only config)
+// ==========================================
+const MIN_LEGAL_AGE = 18;
+
+// ==========================================
+// 2. PURE FUNCTION (Explicit parameters, no hidden globals)
+// ==========================================
+export function validateUserAccess(userAge) {
+    // Function-scoped variable (available throughout validateUserAccess)
+    const baseRole = "GUEST";
+
+    if (userAge >= MIN_LEGAL_AGE) {
+        // Block-scoped variable (exists ONLY inside this 'if' block)
+        const verifiedStatus = "VERIFIED_ADULT";
+        
+        return {
+            age: userAge,
+            role: baseRole,
+            status: verifiedStatus
+        };
+    }
+
+    // 'verifiedStatus' is NOT accessible here (prevents accidental data leaks)
+    return {
+        age: userAge,
+        role: baseRole,
+        status: "RESTRICTED_MINOR"
+    };
+}
+
+// ==========================================
+// 3. EXECUTION
+// ==========================================
+console.log(validateUserAccess(22)); // { age: 22, role: 'GUEST', status: 'VERIFIED_ADULT' }
+console.log(validateUserAccess(15)); // { age: 15, role: 'GUEST', status: 'RESTRICTED_MINOR' }
+
