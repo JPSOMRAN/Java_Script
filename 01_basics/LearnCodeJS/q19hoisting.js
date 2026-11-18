@@ -25,6 +25,28 @@ sum(2,2)
 function sum(a,b){
 return a+b
 }
+//==========================================
+//EG Fxn Declaration
+//==========================================
+// 1. Called BEFORE the function is written
+console.log(addOne(5)); // Output: 6
+
+// 2. Function Declaration
+function addOne(num) {
+  return num + 1;
+}
+//O/P:6
+//==========================================
+//Function Expression
+//==========================================
+// 1. Called BEFORE the variable is assigned
+// console.log(addTwo(5)); // ❌ ReferenceError: Cannot access 'addTwo' before initialization
+
+// // 2. Function Expression
+// const addTwo = function (num) {
+//   return num + 2;
+// };
+
 
 // ==========================================
 //  INDUSTRY PATTERN (Stepdown Rule)
