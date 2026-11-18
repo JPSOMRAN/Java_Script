@@ -65,6 +65,6 @@ function calculateAverage(scores) {
     return total / scores.length;
 }
 
-function getGrade(avg) {
+function getGrade(avg) { 
     return avg >= 90 ? "A+" : "A";
 }
