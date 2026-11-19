@@ -15,3 +15,7 @@ btn.addEventListener("click" ,() => {
   // Apply inline CSS to change the button's text color to red
   btn.style.color = "#1c4800";
 });
+  btn.addEventListener("mouseenter",()=>{
+    btn.style.backgroundColor="#000000";
+    btn.style.color="white";
+  })
