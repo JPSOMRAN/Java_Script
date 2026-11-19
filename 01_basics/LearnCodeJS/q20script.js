@@ -12,3 +12,4 @@ p.style.color="green"
 const div=document.getElementById("div")
 div.style.backgroundColor="orange"
 div.style.color="pink"
+//npx http-server -p 5500 -c-1 for browser
