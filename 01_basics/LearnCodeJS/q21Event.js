@@ -19,3 +19,7 @@ btn.addEventListener("click" ,() => {
     btn.style.backgroundColor="#000000";
     btn.style.color="white";
   })
+    btn.addEventListener("mouseleave",()=>{
+    btn.style.backgroundColor="";
+    btn.style.color="";
+  })
