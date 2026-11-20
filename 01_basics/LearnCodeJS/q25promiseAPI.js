@@ -30,3 +30,4 @@ const obj = new Promise((resolve, reject) => {
 obj.then((res) => {
   console.log("Promise <Resolved>", res);
 });
+//uses these promises so that can be spared from call back hell
