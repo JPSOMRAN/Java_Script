@@ -1,33 +1,56 @@
-// 1. Runs first (synchronous code executes immediately)
-console.log("start");
 
-// 2. Create a new Promise; the executor function runs right away
+console.log("start");
 const obj = new Promise((resolve, reject) => {
-  // Logs immediately while the async fetch is starting
   console.log("Promise <Pending>");
 
-  // 3. Make a GET request to the fake API
   fetch("https://jsonplaceholder.typicode.com/posts/1")
     .then((response) => {
-      // Check if the HTTP status is 200-299; if not, trigger an error
       if (!response.ok) {
         throw new Error("API Error");
       }
-      // Convert the raw HTTP response into a JavaScript object (returns a Promise)
       return response.json();
     })
     .then((data) => {
-      // Fulfill the outer Promise and pass the parsed data out
-      resolve(data); // success
+      resolve(data);
     })
     .catch((err) => {
-      // Catch any network or HTTP errors and reject the outer Promise
-      reject(err); // error
+      reject(err);
     });
 });
 
-// 4. Listen for when 'obj' resolves and log the final data
-obj.then((res) => {
-  console.log("Promise <Resolved>", res);
-});
-//uses these promises so that can be spared from call back hell
+obj
+  .then((res) => {
+    console.log("Promise <Resolved>", res);
+  })
+  .catch((err) => {
+    console.error("Promise <Rejected>", err);
+  });
+  /*
+===============================================================================
+  STUDY NOTES: FETCH CHAIN & PROMISE CONSUMPTION BLOCK
+===============================================================================
+
+1. fetch("https://jsonplaceholder.typicode.com/posts/1")
+   - Starts an async HTTP GET request in the background and returns a Promise.
+
+2. 1st .then((response) => { ... })
+   - Runs as soon as the server sends back HTTP headers (not the body yet).
+   - if (!response.ok): Checks if HTTP status is 200-299. Because fetch() does
+     NOT auto-reject on 404 or 500 errors, throwing an Error here forces
+     execution to jump straight to .catch().
+   - return response.json(): Reads and parses the response body into a JS
+     object. This is also async and passes a new Promise to the next .then().
+
+3. 2nd .then((data) => { resolve(data); })
+   - Receives the parsed JS object and fulfills the outer Promise (obj) with it.
+
+4. .catch((err) => { reject(err); })
+   - Catches any network failure, thrown HTTP error, or JSON parse error, and
+     rejects the outer Promise (obj) with that error.
+
+5. obj.then((res) => ...).catch((err) => ...)
+   - Consumes the outer Promise: .then() runs if resolve(data) was called;
+     .catch() runs if reject(err) was called.
+===============================================================================
+*/
+  console.log("End")
