@@ -17,3 +17,14 @@ function orderFood(customer) {
         }, 2000)
     })
 }
+//use async await try catch in complex task 
+//use then catch in easy task
+async function runOrder() {
+    try {
+        const result= await orderFood("Ankush")
+        console.log(result);
+    } catch (error) {
+        console.log("Error ",error);
+    }
+}
+runOrder()
